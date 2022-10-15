@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        label{ width:500px; display:inline-block; }
+    </style>
+    <title>RANDOM PASSWORD GENERATOR</title>
+</head>
+<body bgcolor="pink">
+<center> <h1>RANDOM PASSWORD GENERATOR</h1> </center>
+<form method='POst' action="/external/">
+    <table>
+        <tr><td>ENTER THE LENGTH OF THE PASSWORD:</td>
+        <td><input type="number" name="LENGTH OF THE PASSWORD"/></td></tr>
+
+         <tr><td>ENTER THE NUMBER OF DIGITS IN THE PASSWORD:</td>
+        <td><input type="number" name="LENGTH OF DIGIT"/></td></tr>
+
+         <tr><td>ENTER THE NUMBER OF UPCASE IN THE PASSWORD:</td>
+        <td><input type="number" name="LENGTH OF UPCASE"/></td></tr>
+
+        <tr><td>ENTER THE NUMBER OF LOCASE IN THE PASSWORD:</td>
+        <td><input type="number" name="LENGTH OF LOCASE"/></td></tr>
+
+         <tr><td>ENTER THE NUMBER OF SYMBOLS IN THE PASSWORD:</td>
+        <td><input type="number" name="LENGTH OF SYMBOL"/></td></tr>
+
+        <tr><td></td>
+        <td><input type="submit" name="send" value="CREATE"/></td></tr>
+    </table>
+    <center>
+        {% if password %}
+        <h3 style="color:blue;"> YOUR PASSWORD IS : {{ password }} </h3>
+        {% endif %}
+    </center>
+</form>
+
+</body>
+</html>
